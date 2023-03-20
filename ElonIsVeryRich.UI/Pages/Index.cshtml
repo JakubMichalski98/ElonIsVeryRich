@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<a class="btn" asp-page-handler="Calculate">Calculate Total Cost</a>
+@Model.TotalCostElement
+<div class="row justify-content-center">
+ 
+    
+
+        @foreach (var l in Model.Launches)
+        {
+            <div class="col-3 border border-2 border-dark m-2 p-2">
+                <h3>Mission Name: @l.MissionName</h3>
+                <p>Flight No. @l.FlightNumber</p>
+                <p>Launch Year: @l.LaunchYear</p>
+            </div>  
+        }
+
+</div>
